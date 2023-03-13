@@ -7,7 +7,7 @@
         }
 
         static void Test1() {
-            int x1,y1,w1,h1,x2,y2,w2,h2, a1,a2, px1,px2,py1,py2, tub;
+            int x1,y1,w1,h1,x2,y2,w2,h2; //ค่าแรกเริ่ม
             Console.Write("Input x1 : ");
             x1 = int.Parse(Console.ReadLine());
             Console.Write("Input y1 : ");
@@ -25,21 +25,34 @@
             Console.Write("Input h2 : ");
             h2 = int.Parse(Console.ReadLine());
 
-            a1 = w1 * h2;
-            a2 = w2 * h2;
-            px1 = w1/2 + x1;
-            py1 = h1/2 + y1;
-            px2 = w2/2 + x2;
-            py2 = h2/2 + x2;
+            int plx1,prx1,poy1,puy1,hx1,hy1;
+            hx1 = w1/2;
+            hy1 = h1/2;
+            plx1 = x1 - hx1;
+            prx1 = x1 + hx1;
+            poy1 = y1 + hy1;
+            puy1 = y1 - hy1;
 
-            
+            int plx2,prx2,poy2,puy2,hx2,hy2;
+            hx2 = w2/2;
+            hy2 = h2/2;
+            plx2 = x2 - hx2;
+            prx2 = x2 + hx2;
+            poy2 = y2 + hy2;
+            puy2 = y2 - hy2;
 
-            Console.WriteLine(a1);
-            Console.WriteLine(a2);
-            Console.WriteLine(px1);
-            Console.WriteLine(py1);
-            Console.WriteLine(px2);
-            Console.WriteLine(py2);
+            if (prx1 > plx2 && poy1 > puy2) {
+                Console.WriteLine("abc");
+            }
+            if (plx1 < prx2 && puy1 < poy2) {
+                Console.WriteLine("abc");
+            }
+            if (prx1 > plx2 && poy1 > puy2) {
+                Console.WriteLine("abc");
+            }
+            if (prx1 < plx2 && puy1 < poy2) {
+                Console.WriteLine("abc");
+            }
         }
         static void Test2() {
             int time, bf = 6, ws = 3, cof = 4;
